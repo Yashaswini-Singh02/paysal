@@ -1,5 +1,6 @@
 // import { Link } from "react-router-dom";
 import React from "react";
+import {Dropdown} from "flowbite-react";
 
 const Navbar = () => {
   return (
@@ -43,7 +44,7 @@ const Navbar = () => {
               <li>
                 <div class="relative inline-block text-left">
                   <div>
-                    <button
+                    {/* <button
                       type="button"
                       class="inline-flex w-full justify-center gap-x-1.5 rounded-lg px-3 py-2 text-md font-semibold text-white ring-2 ring-inset ring-fuchsia-600 "
                       id="menu-button"
@@ -63,7 +64,22 @@ const Navbar = () => {
                           clip-rule="evenodd"
                         />
                       </svg>
-                    </button>
+                    </button> */}
+                    <Dropdown label="Dropdown">
+                      <Dropdown.Header>
+                        <span className="block text-sm">Bonnie Green</span>
+                        <span className="block truncate text-sm font-medium">
+                          bonnie@flowbite.com
+                        </span>
+                      </Dropdown.Header>
+                      <Dropdown.Item >Dashboard</Dropdown.Item>
+                      <Dropdown.Item >Settings</Dropdown.Item>
+                      <Dropdown.Item >
+                        Earnings
+                      </Dropdown.Item>
+                      <Dropdown.Divider />
+                      <Dropdown.Item >Sign out</Dropdown.Item>
+                    </Dropdown>
                   </div>
                 </div>
               </li>
