@@ -4,7 +4,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <div>
-      <nav class="bg-blue-900 border-gray-200 px-2 sm:px-4 p-4 ">
+      <nav class=" bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple via-purple-900 to-black px-2 sm:px-4 p-4 ">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
           <a href="https://flowbite.com/" class="flex items-center">
             <img
@@ -12,8 +12,8 @@ const Navbar = () => {
               class="h-6 mr-3 sm:h-9"
               alt="Flowbite Logo"
             />
-            <span class="self-center text-xl font-semibold whitespace-nowrap ">
-              Flowbite
+            <span class="self-center text-xl  text-white font-semibold whitespace-nowrap ">
+              PaySal
             </span>
           </a>
           <button
@@ -39,27 +39,18 @@ const Navbar = () => {
             </svg>
           </button>
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 "
-                  aria-current="page"
-                >
-                  Home
-                </a>
-              </li>
+            <ul class="flex flex-col  mt-4 border  rounded-lg  md:flex-row md:space-x-6 md:mt-0 md:text-sm md:font-medium md:border-0 ">
               <li>
                 <div class="relative inline-block text-left">
                   <div>
                     <button
                       type="button"
-                      class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                      class="inline-flex w-full justify-center gap-x-1.5 rounded-lg px-3 py-2 text-md font-semibold text-white ring-2 ring-inset ring-fuchsia-600 "
                       id="menu-button"
                       aria-expanded="true"
                       aria-haspopup="true"
                     >
-                      Options
+                      Sign in 
                       <svg
                         class="-mr-1 h-5 w-5 text-gray-400"
                         viewBox="0 0 20 20"
@@ -74,53 +65,32 @@ const Navbar = () => {
                       </svg>
                     </button>
                   </div>
-
-                  {/* Dropdown menu, show/hide based on menu state.
-
-    Entering: "transition ease-out duration-100"
-      From: "transform opacity-0 scale-95"
-      To: "transform opacity-100 scale-100"
-    Leaving: "transition ease-in duration-75"
-      From: "transform opacity-100 scale-100"
-      To: "transform opacity-0 scale-95" */}
-
-                  <div
-                    class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                    role="menu"
-                    aria-orientation="vertical"
-                    aria-labelledby="menu-button"
-                    tabindex="-1"
-                  >
-                    <div class="py-1" role="none">
-                      {/* <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --> */}
-                      <a
-                        href="#"
-                        class="text-gray-700 block px-4 py-2 text-sm"
-                        role="menuitem"
-                        tabindex="-1"
-                        id="menu-item-0"
+                </div>
+              </li>
+              <li>
+                <div class="relative inline-block text-left">
+                  <div>
+                    <button
+                      type="button"
+                      class="inline-flex w-full justify-center gap-x-1.5 rounded-lg px-3 py-2 text-md font-semibold text-white ring-2 ring-inset ring-fuchsia-600 "
+                      id="menu-button"
+                      aria-expanded="true"
+                      aria-haspopup="true"
+                    >
+                      Log in
+                      <svg
+                        class="-mr-1 h-5 w-5 text-gray-400"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
                       >
-                        Account settings
-                      </a>
-                      <a
-                        href="#"
-                        class="text-gray-700 block px-4 py-2 text-sm"
-                        role="menuitem"
-                        tabindex="-1"
-                        id="menu-item-1"
-                      >
-                        Support
-                      </a>
-                      <a
-                        href="#"
-                        class="text-gray-700 block px-4 py-2 text-sm"
-                        role="menuitem"
-                        tabindex="-1"
-                        id="menu-item-2"
-                      >
-                        License
-                      </a>
-                    </div>
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
                   </div>
                 </div>
               </li>
