@@ -5,10 +5,10 @@ import SignUp from "./components/Navbar/SignUp";
 
 function App() {
   return (
-    <div className="App">
+    <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple via-purple-900 to-black">
     <Routes>
       <Route path="/" element={ <Navbar/> } />
-      <Route path="SignUp" element={ <SignUp/> } />
+      <Route path="/signup" element={ <SignUp/> } />
      
     </Routes>
   </div>
