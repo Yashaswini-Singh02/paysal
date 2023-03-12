@@ -5,11 +5,10 @@ module.exports = {
     extend: {
       colors:{
         'purple': '#511281',
-
       },
     },
   },
   plugins: [
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
   ],
 };
