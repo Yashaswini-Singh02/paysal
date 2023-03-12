@@ -55,6 +55,4 @@ const Navbar = () => {
 
 export default Navbar;
 
-// Link to helps to create Multipage
-
 /* <Link to="SignUp">Click to view our SignUp page</Link> */
