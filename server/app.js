@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express();
 const client = require("./utils/database");
+const bodyParser = require('body-parser');
+const employeeRouter = require('./employee/employee.routes');
 
-app.get("/", (req, res) => {
-    const db = client.db('paysal');
-    const result = db.collection("organisation").insertOne({Name: "Karan"})
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-  res.send("Hello World!");
-});
+app.use('/employees', employeeRouter);
 
 app.listen(8000, () => {
   console.log("Server started on port 8000");
