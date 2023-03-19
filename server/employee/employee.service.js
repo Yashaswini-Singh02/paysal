@@ -1,4 +1,4 @@
-const Employee = require('./employee.schema');
+const Employee = require("./employee.schema");
 
 async function getAllEmployees() {
   try {
@@ -38,7 +38,7 @@ async function updateEmployee(id, employeeData) {
   try {
     const employee = await Employee.findById(id);
     if (!employee) {
-      throw new Error('Employee not found');
+      throw new Error("Employee not found");
     }
     Object.assign(employee, employeeData);
     const updatedEmployee = await employee.save();
@@ -52,10 +52,10 @@ async function deleteEmployee(id) {
   try {
     const employee = await Employee.findById(id);
     if (!employee) {
-      throw new Error('Employee not found');
+      throw new Error("Employee not found");
     }
-    await employee.remove();
-    return { message: 'Employee deleted' };
+    await employee.deleteOne();
+    return { message: "Employee deleted" };
   } catch (err) {
     throw new Error(err.message);
   }
@@ -66,5 +66,5 @@ module.exports = {
   getEmployeeById,
   createEmployee,
   updateEmployee,
-  deleteEmployee
+  deleteEmployee,
 };
