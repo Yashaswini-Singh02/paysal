@@ -62,7 +62,8 @@ const Navbar = (props) => {
                 <div class="relative inline-block text-left">
                   <div className="flex w-full  justify-around gap-x-1.5 rounded-lg px-10 py-2 text-base font-semibold text-white ring-2 ring-inset ring-fuchsia-600">
                     <button label="Sign up">
-                      Sign up
+                      
+                      <Link to="SigninOrg">Sign Up</Link>
                     </button>
                   </div>
                 </div>
