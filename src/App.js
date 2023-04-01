@@ -52,8 +52,6 @@ function App() {
     <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple via-purple-900 to-black">
     <Routes>
       <Route path="/" element={ <Navbar bananaSdkInstance={bananaSdkInstance}/> } />
-     
-      <Route path="/" element={ <Navbar/> } />
       <Route path="/SigninOrg" element={ <SigninOrg/> } />
       <Route path="/SigninEmp" element={<SigninEmp/>} />
     </Routes>
