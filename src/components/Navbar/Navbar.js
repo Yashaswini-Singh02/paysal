@@ -48,26 +48,22 @@ const Navbar = (props) => {
             </span>
           </a>
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="flex flex-col  mt-4 border gap-20 rounded-lg  md:flex-row  md:text-sm md:font-medium md:border-0 ">
+            <ul class="flex flex-col  mt-4 border gap-7 rounded-lg  md:flex-row  md:text-sm md:font-medium md:border-0 ">
               <li>
                 <div class="relative inline-block text-left">
                   <div className="flex w-full  justify-around gap-x-1.5 rounded-lg px-10 py-2 text-base font-semibold text-white ring-2 ring-inset ring-fuchsia-600">
-                    <Dropdown className="mt-2" label="Login" inline={true} arrowIcon={false}>
-                    <Dropdown.Item onClick={createWallet}>Employee</Dropdown.Item>
-                      <Dropdown.Item>Organization</Dropdown.Item>
-                    </Dropdown>
+                  <button label="Login" onClick={createWallet}>
+                      Login 
+                    </button>
                   </div>
                 </div>
               </li>
               <li>
                 <div class="relative inline-block text-left">
                   <div className="flex w-full  justify-around gap-x-1.5 rounded-lg px-10 py-2 text-base font-semibold text-white ring-2 ring-inset ring-fuchsia-600">
-                    <Dropdown className="mt-2" label="Signin" inline={true} arrowIcon={false}>
-                      <Dropdown.Item ><Link to="SigninEmp">Employee</Link></Dropdown.Item>
-                      <Dropdown.Item><Link to="SigninOrg">Organization</Link></Dropdown.Item>
-                      
-                      
-                    </Dropdown>
+                    <button label="Sign up">
+                      Sign up
+                    </button>
                   </div>
                 </div>
               </li>
