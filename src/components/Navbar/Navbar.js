@@ -1,8 +1,38 @@
 // import { Link } from "react-router-dom";
 import React from "react";
 import { Dropdown } from "flowbite-react";
+import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = (props) => {
+
+  const bananaSdkInstance = props.bananaSdkInstance;
+  
+
+  const [walletName, setWalletName] = useState('Karan');
+  const [walletAddress, setWalletAddress] = useState('')
+  const [signedMessage, setSignedMessage] = useState('')
+  const [signature, setSignature] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [messageTobeSigned, setMessageTobeSigned] = useState('');
+
+  const createWallet = async () => {
+    console.log(bananaSdkInstance)
+    if(walletName === "") {
+       alert("Wallet name can't be empty!!")
+       return;
+     }
+     const isWalletNameUnqiue = await bananaSdkInstance.isWalletNameUnique(walletName);
+     if(!isWalletNameUnqiue) {
+       alert("Wallet name provided is not unique");
+       return
+     }
+     const name = await bananaSdkInstance.getWalletName();
+     const walletAddres = (await bananaSdkInstance.createWallet(walletName)).address
+     setWalletAddress(walletAddres)
+   }
+
+  
+
   return (
     <div>
       <nav class="px-2 h-screen sm:px-4 p-4 ">
@@ -23,7 +53,7 @@ const Navbar = () => {
                 <div class="relative inline-block text-left">
                   <div className="flex w-full  justify-around gap-x-1.5 rounded-lg px-10 py-2 text-base font-semibold text-white ring-2 ring-inset ring-fuchsia-600">
                     <Dropdown className="mt-2" label="Login" inline={true} arrowIcon={false}>
-                    <Dropdown.Item >Employee</Dropdown.Item>
+                    <Dropdown.Item onClick={createWallet}>Employee</Dropdown.Item>
                       <Dropdown.Item>Organization</Dropdown.Item>
                     </Dropdown>
                   </div>
