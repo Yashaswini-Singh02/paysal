@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
 import { Dropdown } from "flowbite-react";
 import { useState } from "react";
@@ -35,7 +35,7 @@ const Navbar = (props) => {
 
   return (
     <div>
-      <nav class="px-2 h-screen sm:px-4 p-4 ">
+      <nav class="px-2 sm:px-4 p-4 ">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
           <a href="https://flowbite.com/" class="flex items-center">
             <img
@@ -63,8 +63,8 @@ const Navbar = (props) => {
                 <div class="relative inline-block text-left">
                   <div className="flex w-full  justify-around gap-x-1.5 rounded-lg px-10 py-2 text-base font-semibold text-white ring-2 ring-inset ring-fuchsia-600">
                     <Dropdown className="mt-2" label="Signin" inline={true} arrowIcon={false}>
-                      <Dropdown.Item >Employee</Dropdown.Item>
-                      <Dropdown.Item>Organization</Dropdown.Item>
+                      <Dropdown.Item ><Link to="SigninEmp">Employee</Link></Dropdown.Item>
+                      <Dropdown.Item><Link to="SigninOrg">Organization</Link></Dropdown.Item>
                       
                       
                     </Dropdown>

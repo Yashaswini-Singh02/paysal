@@ -1,11 +1,13 @@
 import { Routes, Route } from "react-router-dom"
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import SignUp from "./components/Signup/Signup";
+
 import { Banana } from '@rize-labs/banana-wallet-sdk/dist/BananaProvider'
 import { Chains } from '@rize-labs/banana-wallet-sdk/dist/Constants';
 import { useEffect, useState } from "react";
 import { ethers } from 'ethers';
+import SigninOrg from "./components/Signup/SigninOrg";
+import SigninEmp from "./components/Signup/SigninEmp";
 
 function App() {
 
@@ -50,7 +52,10 @@ function App() {
     <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple via-purple-900 to-black">
     <Routes>
       <Route path="/" element={ <Navbar bananaSdkInstance={bananaSdkInstance}/> } />
-      <Route path="/signup" element={ <SignUp/> } />
+     
+      <Route path="/" element={ <Navbar/> } />
+      <Route path="/SigninOrg" element={ <SigninOrg/> } />
+      <Route path="/SigninEmp" element={<SigninEmp/>} />
     </Routes>
   </div>
 
