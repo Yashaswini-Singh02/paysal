@@ -17,18 +17,17 @@ const EmployeesCard = (props) => {
       abi,
       bananaSigner
     );
-    // getting callData for the function
     const salaryFxn = salaryContract.interface.encodeFunctionData("paySalary", [
       employee.walletAddress,
       "1",
     ]);
     try {
-      // making transaction using execute call of sdk
       const txn = await bananaSdkInstance.execute(
         salaryFxn,
-        Contract_Address,
-        "0"
+        employee.walletAddress,
+        "0.1"
       );
+      console.log(txn);
     } catch (err) {
       console.log(err);
     }
@@ -40,9 +39,7 @@ const EmployeesCard = (props) => {
       const walletAddres = (await bananaSdkInstance.connectWallet(walletName))
         .address;
       setOrgWalletAddress(walletAddres);
-    //   console.log(walletAddres);
-    const eoaAddress = await bananaSdkInstance.getEOAAddress();
-    console.log(eoaAddress);
+      console.log(walletAddres);
     } else {
       alert("You are not registered with us. Please signup first.");
     }
