@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import { useState } from "react";
+import logo from "../assets/logo.png"
 
 const Navbar = (props) => {
   const bananaSdkInstance = props.bananaSdkInstance;
@@ -25,10 +26,10 @@ const Navbar = (props) => {
     <div>
       <nav class="px-2 sm:px-4 p-4 ">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
-          <a href="https://flowbite.com/" class="flex items-center">
+          <a href="" class="flex items-center">
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              class="h-6 mr-3 sm:h-9"
+              src={logo}
+              class="h-20  "
               alt="Flowbite Logo"
             />
             <span class="self-center text-xl  text-white font-semibold whitespace-nowrap ">
