@@ -1,34 +1,12 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import { Dropdown } from "flowbite-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Navbar = (props) => {
   const bananaSdkInstance = props.bananaSdkInstance;
 
   const [isLogin, setIsLogin] = useState(false);
-  const [walletName, setWalletName] = useState("Karan");
   const [walletAddress, setWalletAddress] = useState("");
-
-  const createWallet = async () => {
-    console.log(bananaSdkInstance);
-    if (walletName === "") {
-      alert("Wallet name can't be empty!!");
-      return;
-    }
-    const isWalletNameUnqiue = await bananaSdkInstance.isWalletNameUnique(
-      walletName
-    );
-    if (!isWalletNameUnqiue) {
-      alert("Wallet name provided is not unique");
-      return;
-    }
-    const name = await bananaSdkInstance.getWalletName();
-    const walletAddres = (await bananaSdkInstance.createWallet(walletName))
-      .address;
-    setWalletAddress(walletAddres);
-    setIsLogin(true);
-  };
 
   const connectWallet = async () => {
     const walletName = bananaSdkInstance.getWalletName();
@@ -102,5 +80,3 @@ const Navbar = (props) => {
 };
 
 export default Navbar;
-
-/* <Link to="SignUp">Click to view our SignUp page</Link> */
