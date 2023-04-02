@@ -14,8 +14,8 @@ const Landing = (props) => {
     <div>
       <Navbar bananaSdkInstance={props.bananaSdkInstance} />
       <div className="flex flex-row mt-20">
-        <div className="mt-10 w-2/3 text-center leading-loose text-white text-2xl p-20 font-bold">
-          <p>Streamline payroll, strengthen security:  </p>
+        <div className="mt-10 w-2/3 text-left leading-loose text-white text-2xl p-20 font-bold">
+          <p>Streamline payroll, strengthen security: </p>
           <p> The blockchain-powered solution for multi-organization </p>
           <p>salary distribution</p>
 
@@ -26,14 +26,8 @@ const Landing = (props) => {
 
         <div className="">
           <img
-            className="absolute rounded-2xl "
-            src={Crypto1}
-            width="500"
-            height="200"
-          ></img>
-          <img
             className="absolute rounded-2xl mt-20 mr-90"
-            src={Crypto2}
+            src={Crypto1}
             width="500"
             height="200"
           ></img>
@@ -58,10 +52,13 @@ const Landing = (props) => {
         </div>
       </div>
 
-      <div className="mt-2"> <Features /></div>
-      <div><FutureScope/></div>
-
-     
+      <div className="mt-2">
+        {" "}
+        <Features />
+      </div>
+      <div>
+        <FutureScope />
+      </div>
     </div>
   );
 };
