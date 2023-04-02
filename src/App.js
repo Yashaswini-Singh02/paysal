@@ -7,7 +7,7 @@ import SigninOrg from "./components/Signup/SigninOrg";
 import SigninEmp from "./components/Signup/SigninEmp";
 import Landing from "./components/Navbar/Landing";
 import Dashboard from "./components/Dashboard/Dashboard";
-import Employess from "./components/Employees/Employees";
+import Employees from "./components/Employees/Employees";
 
 function App() {
   useEffect(() => {
@@ -43,8 +43,8 @@ function App() {
           element={<Dashboard bananaSdkInstance={bananaSdkInstance} />}
         />
         <Route
-          path="/employees"
-          element={<Employess bananaSdkInstance={bananaSdkInstance} />}
+          path="/Employees"
+          element={<Employees bananaSdkInstance={bananaSdkInstance} />}
         />
       </Routes>
     </div>
