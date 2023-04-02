@@ -44,6 +44,6 @@ Also, the user need not be able to know how wallets like metamask work and be co
 - Since we had exams in between, time constraint was also there.
 
 # 🤝 Contributors
-<a href="https://github.com/karanpargal/twitt3r/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=karanpargal/twitt3r" />
+<a href="https://github.com/karanpargal/paysal/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=karanpargal/paysal" />
 </a>
