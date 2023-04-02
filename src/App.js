@@ -8,6 +8,8 @@ import { useEffect, useState } from "react";
 import { ethers } from 'ethers';
 import SigninOrg from "./components/Signup/SigninOrg";
 import SigninEmp from "./components/Signup/SigninEmp";
+import Landing from"./components/Navbar/Landing";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() {
 
@@ -51,11 +53,10 @@ function App() {
   return (
     <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple via-purple-900 to-black">
     <Routes>
-      <Route path="/" element={ <Navbar bananaSdkInstance={bananaSdkInstance}/> } />
-     
-      <Route path="/" element={ <Navbar/> } />
+      <Route path="/" element={ <Landing bananaSdkInstance={bananaSdkInstance}/> } />
       <Route path="/SigninOrg" element={ <SigninOrg/> } />
       <Route path="/SigninEmp" element={<SigninEmp/>} />
+      <Route path="/Dashboard" element={<Dashboard/>}/>
     </Routes>
   </div>
 
