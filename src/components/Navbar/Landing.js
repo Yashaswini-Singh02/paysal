@@ -24,25 +24,27 @@ const Landing = (props) => {
           </button>
         </div>
 
-        <div className="">
+        <div className="mr-16">
           <img
-            className="absolute rounded-2xl mt-20 mr-90"
+            className="absolute rounded-2xl mt-36 ml-2 "
             src={Crypto1}
             width="500"
             height="200"
           ></img>
           <img
-            className="absolute rounded-2xl mt-60 mr-100"
+            className="absolute rounded-2xl mt-60 mr-2"
             src={Crypto3}
             width="500"
             height="200"
           ></img>
           <img
-            className="absolute rounded-2xl mt-80 "
+            className="absolute rounded-2xl mt-80 ml-10"
             src={Crypto4}
             width="500"
             height="200"
           ></img>
+        </div>
+        <div>
           <img
             className="relative"
             src={Payment}
@@ -52,8 +54,8 @@ const Landing = (props) => {
         </div>
       </div>
 
-      <div className="mt-2">
-        {" "}
+      <div className="mt-40">
+        
         <Features />
       </div>
       <div>
