@@ -5,21 +5,21 @@ const FutureScope = () => {
     const FeaturesData = [
         {
          
-          Heading: "Driver Policy",
+          Heading: "Add zkRollup",
           Description:
-            "To empower women and to ensure safety, She-Cab provides you with trained Female Drivers",
+            "Using zkRollup we can reduce the gas fees and make the transactions faster",
         },
         {
          
-          Heading: "Passenger Policy",
+          Heading: "Add task management",
           Description:
-            "To ensure your comfort and safety She-Cab only allows Female Passengers",
+            "Organisations can manage the task status of their employees",
         },
         {
          
-          Heading: "EV Cabs",
+          Heading: "Metaverse meetings",
           Description:
-            "To reduce carbon emissions and to save our environment, we use electric vehicles only as our cabs",
+            "Add a metaverse meeting feature to the application",
         },
       ];
     

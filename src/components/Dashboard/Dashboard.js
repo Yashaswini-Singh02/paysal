@@ -87,8 +87,8 @@ const Dashboard = () => {
           <h1 className="text-3xl font-bold mb-8 pt-12">
             Organization Details
           </h1>
-          <div class="block bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-rose-100 to-teal-100 divide-y-2 max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <div class="block bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-rose-100 to-teal-100 divide-y-2 max-w-md p-6 bg-white rounded-lg shadow hover:bg-gray-100">
+            <h5 class="mb-2 text-2xl font-bold text-gray-900 dark:text-white">
               {orgData.name}
             </h5>
             <p class="font-normal text-gray-700 dark:text-gray-400">
@@ -114,9 +114,11 @@ const Dashboard = () => {
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   IT
                 </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
+                <p class="font-normal text-gray-700 border-black">
+                Transforming business through innovative technology solutions. Driving efficiency, agility, and growth for a connected world.
+                </p>
+                <p className="font-normal text-gray-700 dark:text-gray-400">
+                  <strong>Employees:</strong> 2
                 </p>
               </a>
             </div>
@@ -129,9 +131,11 @@ const Dashboard = () => {
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Marketing
                 </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
+                <p class="font-normal text-gray-700 dark:text-gray-400 border-black">
+                Creating Connections, Building Brands. Innovative marketing solutions that engage, inspire, and drive growth. Your partner in strategic marketing success.
+                </p>
+                <p className="font-normal text-gray-700 dark:text-gray-400">
+                  <strong>Employees:</strong> 1
                 </p>
               </a>
             </div>
@@ -144,9 +148,11 @@ const Dashboard = () => {
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Operations
                 </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
+                <p class="font-normal text-gray-700 dark:text-gray-400 border-black">
+                Streamlining Processes, Driving Performance. Efficient operations for sustainable growth. Your partner in optimizing performance, reducing costs, and enhancing customer experience.
+                </p>
+                <p className="font-normal text-gray-700 dark:text-gray-400">
+                  <strong>Employees:</strong> 0
                 </p>
               </a>
             </div>
@@ -156,9 +162,11 @@ const Dashboard = () => {
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Business
                 </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
+                <p class="font-normal text-gray-700 dark:text-gray-400 border-black">
+                Innovating for Success, Driving Growth. Strategic solutions for sustainable business growth. Your partner in navigating change, seizing opportunities, and achieving success.
+                </p>
+                <p className="font-normal text-gray-700 dark:text-gray-400">
+                  <strong>Employees:</strong> 1
                 </p>
               </div>
             </div>

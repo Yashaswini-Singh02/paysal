@@ -14,7 +14,7 @@ const Landing = (props) => {
     <div>
       <Navbar bananaSdkInstance={props.bananaSdkInstance} />
       <div className="flex flex-row mt-20">
-        <div className="mt-10 w-2/3 text-left leading-loose text-white text-2xl p-20 font-bold">
+        <div className="mt-10 w-2/3 text-left leading-loose text-white text-2xl p-20 font-bold pl-60">
           <p>Streamline payroll, strengthen security: </p>
           <p> The blockchain-powered solution for multi-organization </p>
           <p>salary distribution</p>

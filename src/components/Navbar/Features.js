@@ -5,21 +5,21 @@ const Features = () => {
   const FeaturesData = [
     {
    
-      Heading: "Driver Policy",
+      Heading: "Company management",
       Description:
-        "To empower women and to ensure safety, She-Cab provides you with trained Female Drivers",
+        "Organisations can manage their employees, their professional and payroll details",
     },
     {
      
-      Heading: "Passenger Policy",
+      Heading: "One Click Pay",
       Description:
-        "To ensure your comfort and safety She-Cab only allows Female Passengers",
+        "Organisation can pay their employees with just one click after connecting the hardware wallet",
     },
     {
       
-      Heading: "EV Cabs",
+      Heading: "Multiple Organisation",
       Description:
-        "To reduce carbon emissions and to save our environment, we use electric vehicles only as our cabs",
+        "People who own multiple organisations can manage them all from one place",
     },
   ];
 
