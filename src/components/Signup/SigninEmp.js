@@ -1,12 +1,63 @@
-import React from 'react'
+import React from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-const SigninEmp = () => {
+const SigninEmp = (props) => {
+  const bananaSdkInstance = props.bananaSdkInstance;
+  const [orgWalletAddress, setOrgWalletAddress] = useState("");
+
+  const connectWallet = async () => {
+    const walletName = bananaSdkInstance.getWalletName();
+    if (walletName) {
+      const walletAddres = (await bananaSdkInstance.connectWallet(walletName))
+        .address;
+      setOrgWalletAddress(walletAddres);
+      console.log(walletAddres);
+    } else {
+      alert("You are not registered with us. Please signup first.");
+    }
+  };
+
+  useEffect(() => {
+    connectWallet();
+  }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const name = document.getElementById("Name").value;
+    const department = document.getElementById("Department").value;
+    const email = document.getElementById("Email").value;
+    const orgId = orgWalletAddress;
+    const walletAddress = document.getElementById("walletAddress").value;
+    const employeeData = {
+      name: name,
+      department: department,
+      email: email,
+      orgId: orgId,
+      walletAddress: walletAddress,
+    };
+    if (
+      !employeeData.name ||
+      !employeeData.department ||
+      !employeeData.email ||
+      !employeeData.orgId
+    ) {
+      alert("Please fill all fields");
+    }
+    const res = await axios.post(
+      "http://localhost:8000/employees/",
+      employeeData
+    );
+    console.log(res);
+    alert("Employee added successfully");
+  };
+
   return (
-    <div >
+    <div>
       <div class="">
         <nav class="px-2  sm:px-4 p-4 mb-8">
           <div class="container flex flex-wrap items-center justify-between mx-auto">
-            <a href="https://flowbite.com/" class="flex items-center">
+            <a href="http://localhost:3000/Dashboard" class="flex items-center">
               <img
                 src="https://flowbite.com/docs/images/logo.svg"
                 class="h-6 mr-3 sm:h-9"
@@ -29,70 +80,71 @@ const SigninEmp = () => {
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="Name"
               type="text"
-              placeholder="userame"
+              placeholder="John Doe"
             ></input>
           </div>
           <div class="mb-4">
             <label
               class="block text-white text-sm font-bold mb-2"
-              for="Industry"
+              for="Department"
             >
-              Position
+              Department
             </label>
             <input
               class="shadow appearance-none border border-black rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="Industry"
+              id="Department"
               type="text"
+              placeholder="IT/Marketing/Operations/Business"
             ></input>
           </div>
           <div class="mb-4">
-            <label class="block text-white text-sm font-bold mb-2" for="e-mail">
+            <label class="block text-white text-sm font-bold mb-2" for="Email">
               Email Address
             </label>
             <input
               class="shadow appearance-none border border-black rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-              id="email"
+              id="Email"
               type="email"
               placeholder="abc@company.com"
             ></input>
           </div>
 
           <div class="mb-4">
-            <label class="block text-white text-sm font-bold mb-2" for="Organization-Id">
-              Organization-Id
-            </label>
-            <input
-              class="shadow appearance-none border border-black rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-              id="Organization-Id"
-              type="text"
-              placeholder="abc"
-            ></input>
-          </div>
-
-          <div class="mb-6">
             <label
               class="block text-white text-sm font-bold mb-2"
-              for="Wallet-Address"
+              for="walletAddress"
             >
-              Wallet Address
+              Employee Wallet Address
             </label>
             <input
               class="shadow appearance-none border border-black rounded w-full py-2 px-3 text-gray-700  leading-tight focus:outline-none focus:shadow-outline"
-              id="Wallet Adress"
+              id="walletAddress"
               type="text"
+              placeholder="0xC2e7D52caEecC220AF3f48785ebdF8b331a7B668"
             ></input>
+          </div>
+
+          <div class="mb-4">
+            <label
+              class="block text-white text-sm font-bold mb-2"
+              for="Organization-Id"
+            >
+              Organization Wallet Address:
+            </label>
+            {orgWalletAddress}
           </div>
 
           <div class="flex space-x-2 items-center justify-between">
             <button
-              class="bg-white w-24 hover:bg-fuchsia-100 text-black text-md font-bold py-2  rounded focus:outline-none focus:shadow-outline"
+              class="bg-white w-48 hover:bg-fuchsia-100 text-black text-md font-bold py-2  rounded focus:outline-none focus:shadow-outline"
               type="button"
+              onClick={handleSubmit}
             >
-              Sign In
+              Register Employee
             </button>
           </div>
         </form>
-        <p class="text-center mt-96 text-gray-500 text-xs">
+        <p class="text-center mt-10 pb-20 text-gray-500 text-xs">
           &copy;2023 PaySal Corp. All rights reserved.
         </p>
       </div>

@@ -31,13 +31,13 @@ router.post("/", async (req, res) => {
   try {
     const orgData = {
       name: req.body.name,
-      address: req.body.address,
+      industry: req.body.industry,
       email: req.body.email,
       walletAddress: req.body.walletAddress,
     };
     if (
       !orgData.name ||
-      !orgData.address ||
+      !orgData.industry ||
       !orgData.email ||
       !orgData.walletAddress
     ) {

@@ -134,7 +134,7 @@ const SigninOrg = (props) => {
               type="button"
               onClick={submitForm}
             >
-              Sign In
+              Sign Up
             </button>
           </div>
         </div>

@@ -31,14 +31,14 @@ router.post("/", async (req, res) => {
   try {
     const employeeData = {
       name: req.body.name,
-      position: req.body.position,
+      department: req.body.department,
       email: req.body.email,
       walletAddress: req.body.walletAddress,
       orgId: req.body.orgId,
     };
     if (
       !employeeData.name ||
-      !employeeData.position ||
+      !employeeData.department ||
       !employeeData.email ||
       !employeeData.walletAddress ||
       !employeeData.orgId
@@ -61,8 +61,8 @@ router.put("/:id", async (req, res) => {
   if (req.body.name) {
     employeeData.name = req.body.name;
   }
-  if (req.body.position) {
-    employeeData.position = req.body.position;
+  if (req.body.department) {
+    employeeData.department = req.body.department;
   }
   if (req.body.email) {
     employeeData.email = req.body.email;

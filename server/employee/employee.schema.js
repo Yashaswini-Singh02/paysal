@@ -6,7 +6,7 @@ const employeeSchema = new Schema({
     type: String,
     required: true,
   },
-  position: {
+  department: {
     type: String,
     required: true,
   },

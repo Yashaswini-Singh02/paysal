@@ -1,13 +1,20 @@
-import React from 'react';
-import Navbar from '../Navbar/Navbar';
+import React from "react";
+import { useEffect } from "react";
+import Navbar from "../Navbar/Navbar";
 
-const Employess = () => {
+const Employess = (props) => {
+  const bananaSdkInstance = props.bananaSdkInstance;
 
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  const fetchEmployees = async () => {
+    const res = await axios.get("http://localhost:8000/employees/");
+    console.log(res);
+  };
 
-export default Employess
+  useEffect(() => {
+    fetchEmployees();
+  }, []);
+
+  return <div></div>;
+};
+
+export default Employess;
