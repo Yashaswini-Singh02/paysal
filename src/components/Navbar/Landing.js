@@ -32,13 +32,13 @@ const Landing = (props) => {
             height="200"
           ></img>
           <img
-            className="absolute rounded-2xl mt-40 mr-100"
+            className="absolute rounded-2xl mt-60 mr-100"
             src={Crypto3}
             width="500"
             height="200"
           ></img>
           <img
-            className="absolute rounded-2xl mt-60 "
+            className="absolute rounded-2xl mt-80 "
             src={Crypto4}
             width="500"
             height="200"
