@@ -1,70 +1,49 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
+<p align="center">
+<b>PaySal
+<br></b>
+</p>
+<blockquote align="center">built on <span style="color: #8b0000;">☕</span> at <a href="https://ethforall.devfolio.co/">Web3 Init</a>.</blockquote>
 
-## Available Scripts
+# 💡 **What we solve**
 
-In the project directory, you can run:
+Many people tend to have multiple startups as their organization, we intend to provide them with a single platform from where they can manage their organizations and their employees.
+We provide them with features like employee management, department management, salary payment, etc.
+Also, the user need not be able to know how wallets like metamask work and be confused. We use the banana wallet, which provides users with an easy way to transact. This adds an extra security measure as well as provides an ease to the user.
 
-### `yarn start`
+# Features
+- Organisations can manage their employees, their professional and payroll details.
+- Organisation can pay their employees with just one click after connecting the hardware key.
+- People who own multiple organisations can manage them all from one place.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 🧠 Knowledge Primer
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [BananaWallet SDK](https://banana-wallet-docs.rizelabs.io/) is a smart contract wallet infrastructure for key management and 2FA solutions.
 
-### `yarn test`
+# 💻 Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React.js
+- TailwindCSS
+- BananaWallet
+- Nodejs
+- Express
+- MongoDB
+- Solidity
 
-### `yarn build`
+# ⏭️ What's next
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Add zkRollup: Using zkRollup we can reduce the gas fees and make the transactions faster.
+- Add task management: Organisations can manage the task status of their employees.
+- Metaverse meetings: Add a metaverse meeting feature to the application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#   Challenges we ran into
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Banana wallet SDK was new to us and we had some time figuring it out.
+- Adding multiple organization support was a bit of a hassle.
+- Since we had exams in between, time constraint was also there.
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# 🤝 Contributors
+<a href="https://github.com/karanpargal/twitt3r/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=karanpargal/twitt3r" />
+</a>
