@@ -19,9 +19,9 @@ const Employess = (props) => {
   return (
     <div className="w-full pb-10">
       <div class=" ">
-        <nav class="px-2 sm:px-4 p-4 mb-8">
+        <nav class="px-2 sm:px-4 p-4 mb-2">
           <div class="container flex flex-wrap items-center justify-between mx-auto">
-            <a href="https://flowbite.com/" class="flex items-center">
+            <a href="dashboard" class="flex items-center">
               <img
                 src="https://flowbite.com/docs/images/logo.svg"
                 class="h-6 mr-3 sm:h-9"
@@ -63,7 +63,7 @@ const Employess = (props) => {
 
               <li className="bg-white rounded-lg">
                 <a
-                  href="#"
+                  href="Employees"
                   class="flex items-center p-2 text-black rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <svg
@@ -85,18 +85,26 @@ const Employess = (props) => {
             </ul>
           </div>
         </aside>
-        {employeeData.map((employee) => (
-          <div className="text-white ml-10">
-            <div class="flex flex-col">
+        <div className="text-white ml-10 w-[100%]">
+          <div className="flex justify-between place-items-center place-self-center place-content-center">
+            <div className="text-3xl font-bold mb-8 pt-12">
+              Your Employees
+            </div>
+            <a href="SigninEmp" className="mr-12 p-4 border-2 border-fuchsia-600 font-medium rounded-lg">
+              Add Employee
+            </a>
+          </div>
+          <div class="grid grid-cols-3 gap-y-4 mt-10">
+            {employeeData.map((employee) => (
               <EmployeesCard
                 employee={employee}
                 bananaSdkInstance={bananaSdkInstance}
               />
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
-      <p class="text-center mt-10 pb-20 text-gray-500 text-xs">
+      <p class="text-center mt-10 pb-10 text-gray-500 text-xs">
         &copy;2023 PaySal Corp. All rights reserved.
       </p>
     </div>

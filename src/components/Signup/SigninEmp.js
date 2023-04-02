@@ -4,6 +4,7 @@ import axios from "axios";
 
 const SigninEmp = (props) => {
   const bananaSdkInstance = props.bananaSdkInstance;
+  console.log(bananaSdkInstance);
   const [orgWalletAddress, setOrgWalletAddress] = useState("");
 
   const connectWallet = async () => {
@@ -17,10 +18,6 @@ const SigninEmp = (props) => {
       alert("You are not registered with us. Please signup first.");
     }
   };
-
-  useEffect(() => {
-    connectWallet();
-  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -50,7 +47,16 @@ const SigninEmp = (props) => {
     );
     console.log(res);
     alert("Employee added successfully");
+    document.getElementById("Name").value = "";
+    document.getElementById("Department").value = "";
+    document.getElementById("Email").value = "";
+    document.getElementById("walletAddress").value = "";
   };
+  
+
+  useEffect(() => {
+    connectWallet();
+  }, []);
 
   return (
     <div>

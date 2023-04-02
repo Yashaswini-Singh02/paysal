@@ -35,6 +35,7 @@ const EmployeesCard = (props) => {
 
   const connectWallet = async () => {
     const walletName = bananaSdkInstance.getWalletName();
+    console.log(walletName);
     if (walletName) {
       const walletAddres = (await bananaSdkInstance.connectWallet(walletName))
         .address;
@@ -53,7 +54,7 @@ const EmployeesCard = (props) => {
     <div>
       <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700">
         <div class="flex items-baseline text-gray-900 dark:text-white">
-          <span class="text-3xl font-extrabold tracking-tight">
+          <span class="text-3xl font-semibold tracking-tight">
             {employee.name}
           </span>
         </div>
