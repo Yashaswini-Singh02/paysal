@@ -11,13 +11,13 @@ import Crypto4 from "../assets/Crypto4.png";
 
 const Landing = (props) => {
   return (
-    <div>
+    <div className="font-poppins">
       <Navbar bananaSdkInstance={props.bananaSdkInstance} />
       <div className="flex flex-row mt-20">
-        <div className="mt-10 w-2/3 text-left leading-loose text-white text-2xl p-20 font-bold pl-60">
-          <p>Streamline payroll, strengthen security: </p>
-          <p> The blockchain-powered solution for multi-organization </p>
-          <p>salary distribution</p>
+        <div className="mt-10 w-2/3 text-left leading-loose text-white text-3xl p-20 font-bold pl-28">
+          <p>Streamline payroll, strengthen security </p>
+          <p className="text-xl font-medium"> The blockchain-powered solution for multi-organization salary distribution </p>
+          <p></p>
 
           <button class=" mt-16  font-normal border-fuchsia-600 border-2 text-white rounded-lg px-10 py-2 text-lg font-semibold ">
             <Link to="Dashboard">Dashboard</Link>

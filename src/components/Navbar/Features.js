@@ -24,7 +24,7 @@ const Features = () => {
   ];
 
   return (
-    <div className="mt-10 font-display" id="features">
+    <div className="mt-10 font-poppins" id="features">
       <p className=" text-4xl text-[white] font-bold ml-48 mb-12">
         Features{" "}
       </p>
